@@ -126,18 +126,22 @@ body {
 
 .navigation {
     @extend .stage-table-cell;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // bottom: 0;
     width: $primary-nav-width + $secondary-nav-width;
     // left: -100%;
-    z-index: -1;
+    // z-index: -1;
 
+    @media #{$small-only} {
+         display: none !important;
+    }
     @media #{$medium-up} {
         position: static;
         top: $header-height;
         left: 0;
+        display: block;
         /*bottom: $footer-height;*/
         /*width: auto;*/
     }
@@ -300,7 +304,11 @@ body {
 .main {
     @extend .stage-table-cell;
     width: 100%;
-    padding: rem-calc(20 20 0 20);
+    padding: rem-calc(20 55 0 20);
+
+    @media #{$xlarge-up} {
+        padding: rem-calc(20 20 0 20);
+    }
 }
 
 //-
@@ -374,7 +382,7 @@ body {
     @extend .stage-table-cell;
     position: absolute;
     top: 0;
-    right: -260px;
+    right: rem-calc(-250);
     bottom: 0;
     background: #EDEFEF;
     z-index: 10;
@@ -385,6 +393,27 @@ body {
     	right: auto;
         display: table-cell;
     }
+}
+
+.sidebar.is-closed {
+    right: rem-calc(-250);
+}
+
+.sidebar.is-open {
+    right: 0;
+}
+
+.sidebar .tabs-content {
+    @media #{$small-up} {
+        display: none;
+    }
+    @media #{$xlarge-up} {
+        display: block;
+    }
+}
+
+.sidebar.is-closed .tabs-content {
+    display: none;
 }
 
 .sidebar-internal {
@@ -429,10 +458,48 @@ body {
     display: block;
     font-size: 1.4rem;
     line-height: 1;
+    padding: rem-calc(8 0 8 18);
+
+    @media #{$xlarge-up} {
+        padding: 0;
+    }
+}
+
+.sidebar.is-closed .tabs i {
+    display: block;
+    font-size: 1.4rem;
+    line-height: 1;
+    padding: rem-calc(8 0 8 18);
+}
+
+.sidebar .tabs .text {
+    display: none;
+
+    @media #{$xlarge-up} {
+        display: block;
+    }
+}
+
+.sidebar.is-closed .tabs .text {
+    display: none;
 }
 
 .sidebar .tabs li {
-    width: 33.3333333%;
+    display: block;
+    float: none;
+    text-align: left;
+
+    @media #{$xlarge-up} {
+        float: left;
+        text-align: center;
+        width: 33.3333333%;
+    }
+}
+
+.sidebar.is-closed .tabs li {
+    display: block;
+    float: none;
+    text-align: left;
 }
 
 .sidebar .tabs a {
@@ -536,7 +603,7 @@ body {
 // Animations
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
-// Special (Shame.css)
+// Special / Misc - Refactor (Shame.css)
 //-----------------------------------------------------------------
 
 .row.is-full-width {
@@ -552,6 +619,34 @@ body {
 
 .touch-scrolling {
     -webkit-overflow-scrolling: touch;
+}
+
+.primary-color {
+    color: $primary-color;
+}
+
+.mm-menu {
+    background: #333333;
+}
+
+.mm-menu a {
+    // text-transform: uppercase;
+}
+
+.mm-menu .dropdown a {
+    text-transform: none;
+}
+
+.mm-menu li a {
+    color: white;
+}
+
+//-----------------------------------------------------------------
+// IE8
+//-----------------------------------------------------------------
+
+.lt-ie9 .lv-page {
+    display: none;
 }
 
 //-----------------------------------------------------------------

@@ -16,6 +16,7 @@
 
     <!-- build:css /assets/css/optimized.css -->
     <link rel="stylesheet" href="/vendor/animate.css/animate.min.css">
+    <link rel="stylesheet" href="/css/jquery-mmenu-all.css">
     <link rel="stylesheet" href="/css/foundation/foundation.css">
     <link rel="stylesheet" href="/css/foundation-icons.css">
     <link rel="stylesheet" href="/css/liquidvisual/liquidvisual.css">
@@ -55,6 +56,18 @@
         </div> <!-- .lv-page -->
     </div> <!-- .lv-super -->
 
+    <!-- OFF-CANVAS MENU (LEFT) -->
+    <nav id="off-canvas-menu-left" class="hide" aria-hidden="true">
+        {% include navigation_off_canvas.html %}
+    </nav>
+
+    <!--[if lt IE 9]>
+    <div class="lv-alert lv-unselectable">
+        <p>Your browser is out of date. Please <a href="http://outdatedbrowser.com">upgrade</a> to experience more of the web.</p>
+        <span class="close-btn">&times;</span>
+    </div>
+    <![endif]-->
+
     <!-- ***** JAVASCRIPT ***** -->
 
     <!-- build:js /assets/scripts/optimized.js -->
@@ -63,10 +76,32 @@
     <script src="/vendor/fastclick/lib/fastclick.js"></script>
     <script src="/vendor/jquery-placeholder/jquery.placeholder.js"></script>
     <script src="/vendor/nprogress/nprogress.js"></script>
+    <script src="/scripts/jquery-mmenu-min-all.js"></script>
     <script src="/scripts/main.js"></script>
     <!-- endbuild -->
 
-    <script>$(document).foundation();</script>
+    <script>
+        $(document).foundation();
+
+        $(function() {
+            $("#off-canvas-menu-left").mmenu({
+               "offCanvas": {
+                  "position": "left"
+               }
+            });
+         });
+
+    var sidebar = $(".sidebar");
+    $("#sidebar-collapse-btn").click(function(){
+      if (sidebar.hasClass('is-closed')) {
+        sidebar.removeClass('is-closed').addClass('is-open');
+    } else {
+      sidebar.removeClass('is-open').addClass('is-closed');
+    }
+
+    });
+
+    </script>
 
     <!-- Google Analytics Here -->
 
