@@ -32,7 +32,7 @@
             <!-- HEADER -->
             <header class="header">
                 <section class="mobile-nav show-for-small-only">
-    <a class="left-menu-btn left" href="#"><span class="hit-area"><i class="fi-list"></i></span></a>
+    <a class="left-menu-btn left" href="#off-canvas-menu-left"><span class="hit-area"><i class="fi-list"></i></span></a>
     <a class="right-menu-btn right" href="#"><span class="hit-area"><i class="fi-results-demographics"></span></i></a>
     <span class="logo">
         <span class="hit-area">
@@ -60,24 +60,7 @@
   </div>
 </div>
 
-<script>
-  window.onload = function() {
-    $('.left-menu-btn').click(function(){
-        $('.lv-page').css(
-        {
-          "position": "absolute",
-          "left": "325px"
 
-        });
-    });
-
-    $('#temp-return').click(function(){
-        // $('.lv-page').animate({left: "0"}, 300, 'linear', function(){});
-        alert('wot');
-    });
-
-  };
-</script>
             </header>
 
             <!-- STAGE -->
@@ -190,13 +173,13 @@
                 <div class="sidebar-internal">
                     <ul id="fixedScroll" class="tabs text-center" data-tab role="tablist">
   <li class="tab-title active" role="presentational">
-    <a href="#details" role="tab" tabindex="0" aria-selected="true" controls="panel2-1"><i class="fi-eye"></i> Details</a>
+    <a href="#details" role="tab" tabindex="0" aria-selected="true" controls="panel2-1"><i class="fi-eye"></i> <span class="text">Details</span></a>
   </li>
   <li class="tab-title" role="presentational">
-    <a href="#pins" role="tab" tabindex="0" aria-selected="false" controls="panel2-2"><i class="fi-flag"></i> Pins</a>
+    <a href="#pins" role="tab" tabindex="0" aria-selected="false" controls="panel2-2"><i class="fi-flag"></i> <span class="text">Pins</span></a>
   </li>
   <li class="tab-title" role="presentational">
-    <a href="#collapse" role="tab" tabindex="0" aria-selected="false" controls="panel2-3"><i class="fi-arrow-right"></i> Collapse</a>
+    <a id="sidebar-collapse-btn" href="#collapse" role="tab" tabindex="0" aria-selected="false" controls="panel2-3"><i class="fi-arrow-right"></i> <span class="text">Collapse</span></a>
   </li>
 </ul>
 
@@ -237,6 +220,8 @@
 
   </section>
 </div>
+
+
 
 
                 </div>
@@ -289,11 +274,61 @@
         </div> <!-- .lv-page -->
     </div> <!-- .lv-super -->
 
+    <!-- OFF-CANVAS MENU (LEFT) -->
+    <nav id="off-canvas-menu-left" class="hide" aria-hidden="true">
+        <ul>
+    <li class=""><a href="/"><i class="fi-home"></i>&nbsp; Home</a></li>
+    <li class=" active "><a href="/research/"><i class="fi-magnifying-glass"></i>&nbsp; Research</a>
+        <ul class="no-bullet">
+            <li class="active"><a href="#">Basic</a></li>
+            <li><a href="#">Cases</a></li>
+            <li><a href="#">Legislation / Commentary</a></li>
+            <li><a href="#">Journals</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Government and Regulatory</a></li>
+        </ul>
+    </li>
+    <li class=""><a href="/workflow/"><i class="fi-graph-bar"></i>&nbsp; Workflow</a></li>
+    <li class=""><a href="/tools/"><i class="fi-wrench"></i>&nbsp; Tools</a></li>
+    <li class=""><a href="/learning/"><i class="fi-info"></i>&nbsp; Learning</a></li>
+    <li class=""><a href="/alerts/"><i class="fi-alert"></i>&nbsp; Alerts</a></li>
+    <li class=""><a href="/history/"><i class="fi-clock"></i>&nbsp; History</a></li>
+</ul>
+    </nav>
+
+    <!--[if lt IE 9]>
+    <div class="lv-alert lv-unselectable">
+        <p>Your browser is out of date. Please <a href="http://outdatedbrowser.com">upgrade</a> to experience more of the web.</p>
+        <span class="close-btn">&times;</span>
+    </div>
+    <![endif]-->
+
     <!-- ***** JAVASCRIPT ***** -->
 
     <script src="/assets/scripts/optimized.js"></script>
 
-    <script>$(document).foundation();</script>
+    <script>
+        $(document).foundation();
+
+        $(function() {
+            $("#off-canvas-menu-left").mmenu({
+               "offCanvas": {
+                  "position": "left"
+               }
+            });
+         });
+
+    var sidebar = $(".sidebar");
+    $("#sidebar-collapse-btn").click(function(){
+      if (sidebar.hasClass('is-closed')) {
+        sidebar.removeClass('is-closed').addClass('is-open');
+    } else {
+      sidebar.removeClass('is-open').addClass('is-closed');
+    }
+
+    });
+
+    </script>
 
     <!-- Google Analytics Here -->
 
