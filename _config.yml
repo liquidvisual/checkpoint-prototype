@@ -1,0 +1,11 @@
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: "" # empty string for all files
+    values:
+      something: "default value"

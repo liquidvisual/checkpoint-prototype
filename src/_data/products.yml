@@ -1,0 +1,11 @@
+# All Products
+
+ - title: Westlaw AU
+   description: Thomson Reuters - your leading source for Federal Budget News
+   url: /products/westlaw-au/
+   img_path: http://placehold.it/480x270
+
+ - title: Westlaw NZ
+   url: /products/westlaw-au/
+   description: From case law to precedents. Go straight to what you're looking for.
+   img_path: http://placehold.it/480x270

@@ -1,0 +1,14 @@
+<ul class="lv-breadcrumbs">
+    <!-- Decoration -->
+    <li><i class="fi-marker"></i></li>
+    <li><a href="/">Home</a></li>
+
+    <!-- Cheating a bit with Jekyll here, build breadcrumbs as normal -->
+    {% if page.product %}
+        <li><a href="{{ "/products/" | prepend: site.baseurl }}">Products</a></li>
+        <li><a href="{{ "/products/westlaw-au/" | prepend: site.baseurl }}">{{ page.product }}</a></li>
+    {% endif %}
+
+    <li class="active">{{ page.title }}</li>
+</ul>
+

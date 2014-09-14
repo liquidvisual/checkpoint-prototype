@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]>       <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if lt IE 9]>       <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]>          <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!-->  <html class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="{{ page.description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
+
+    <!-- build:css /assets/css/optimized.css -->
+    <link rel="stylesheet" href="/vendor/animate.css/animate.min.css">
+    <link rel="stylesheet" href="/css/foundation/foundation.css">
+    <link rel="stylesheet" href="/css/foundation-icons.css">
+    <link rel="stylesheet" href="/css/liquidvisual/liquidvisual.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js /assets/scripts/priority-optimized.js -->
+    <script src="/vendor/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+	<!--[if lt IE 9]>
+	<script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+	<script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+    <div class="lv-super">
+        <div class="lv-page">
+
+            <!-- HEADER -->
+            <header class="header">
+                {% include header.html %}
+            </header>
+
+            <!-- STAGE -->
+            <section class="stage {% if page.url == "/" %} homepage {% else %} internal {% endif %}">
+                {{ content }}
+            </div> <!-- .stage -->
+
+            <!-- FOOTER -->
+            <footer class="footer hide-for-small-only">
+                {% include footer.html %}
+            </footer>
+
+        </div> <!-- .lv-page -->
+    </div> <!-- .lv-super -->
+
+    <!-- ***** JAVASCRIPT ***** -->
+
+    <!-- build:js /assets/scripts/optimized.js -->
+	<script src="/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/vendor/foundation/js/foundation.min.js"></script>
+    <script src="/vendor/fastclick/lib/fastclick.js"></script>
+    <script src="/vendor/jquery-placeholder/jquery.placeholder.js"></script>
+    <script src="/vendor/nprogress/nprogress.js"></script>
+    <script src="/scripts/main.js"></script>
+    <!-- endbuild -->
+
+    <script>$(document).foundation();</script>
+
+    <!-- Google Analytics Here -->
+
+    <!-- No Javascript Warning -->
+    <noscript>
+        <div class="lv-alert lv-unselectable">
+            <p>Your browser has Javascript disabled. Some features may be limited.</p>
+            <span class="close-btn hide">&times;</span>
+        </div>
+    </noscript>
+
+</body>
+</html>

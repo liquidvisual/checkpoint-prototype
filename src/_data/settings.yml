@@ -1,0 +1,41 @@
+# GLOBAL SITE SETTINGS
+
+# Site settings
+title: "VACSWIM South Australia - Swimming and Water Safety, Water Survival for Children"
+company: SA Water VACSWIM
+description: "The VACSWIM program is a South Australian government funded program for children aged 5 - 13 years. The program provides participants with opportunities to develop a range of skills and positive experiences in the areas of water safety, confidence/competence in the water, personal survival activities, emergency procedures and basic swimming stroke improvement."
+
+# Contact Info
+email: vacswimsa@ymca.org.au
+phone: (08) 8200 2525
+fax: (08) 8353 0384
+facebook: http://www.facebook.com/vacswimsa
+
+# Order the primary navigation (skip home)
+primary_navigation:
+ - {title: About Us, icon: fi-star, url: /about-us/, second_level: about-us}
+ - {title: VACSWIM Locations, icon: fi-star, url: /vacswim-locations/}
+ - {title: Program Information, icon: fi-star, url: /program-information/, second_level: program-information}
+ - {title: Employment, icon: fi-star, url: /employment/}
+ - {title: News, icon: fi-star, url: /news/}
+ - {title: Media, icon: fi-star, url: /media/}
+
+# Second level navigation - About Us
+about_us:
+ - {title: Enquire Online, url: /about-us/enquire-online/}
+ - {title: Contact Us, url: /about-us/contact-us/}
+ - {title: Testimonials, url: /about-us/testimonials/}
+ - {title: Supporters and Sponsors, url: /about-us/supporters-and-sponsors/}
+ - {title: Introducing the YMCA, url: /about-us/introducing-the-ymca/}
+
+# Second level navigation - Program Information
+program_information:
+ - {title: Program Fees, url: /program-information/program-fees/}
+ - {title: Levels / Stages, url: /program-information/levels-stages/}
+ - {title: Disabilities, url: /program-information/disabilities/}
+ - {title: Terms and Conditions, url: /program-information/terms-and-conditions/}
+ - {title: Calendar Dates, url: /program-information/calendar-dates/}
+
+# Second level navigation - Media
+media:
+ - {title: Social Media, url: /media/social-media/}

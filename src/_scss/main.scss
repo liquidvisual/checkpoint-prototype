@@ -1,0 +1,562 @@
+@import "foundation/settings";
+/*
+    MAIN.CSS
+
+    - Last updated: 13.09.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+$primary-color: #FD8023; //#4666AE;
+$secondary-color: #FEA66C; //#2C2C2C;
+$dark-grey: #2C2C2C;
+$border-color-light: #D4DCE3;
+
+$header-height: rem-calc(80);
+$primary-nav-width: rem-calc(65);
+$secondary-nav-width: rem-calc(260);
+$sidebar-width: rem-calc(300);
+$footer-height: rem-calc(40);
+
+//-----------------------------------------------------------------
+// Global
+//-----------------------------------------------------------------
+
+body {
+    overflow-x: hidden;
+}
+
+//-----------------------------------------------------------------
+// lv-super: top-most non-visual wrapper | lv-page: visual wrapper
+//-----------------------------------------------------------------
+
+.lv-page {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    @media #{$medium-up} {
+        /*padding-top: 0;*/
+    }
+}
+
+//-----------------------------------------------------------------
+// Header
+//-----------------------------------------------------------------
+
+.header {
+    position: relative;
+    background: $primary-color; /* fallback */
+    // background: rgba(71,104,176,0.9);
+    background: rgba(250,135,74,0.93);
+	// background: rgba(255,157,59,.95);
+    height: $header-height;
+}
+
+/* overlay image over banner */
+.header:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/content/banner-1.jpg);
+    background-size: cover;
+    z-index: -1;
+}
+
+//=========================================
+// Logo
+//=========================================
+
+.header .logo {
+    padding: 10px;
+    display: inline-block;
+}
+
+//=========================================
+// Mobile Nav
+//=========================================
+
+.mobile-nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 44px;
+}
+
+.mobile-nav .logo {
+    text-align: center;
+    display: block;
+    height: 100%;
+    line-height: 44px;
+    color: white;
+}
+
+.mobile-nav .logo .hit-area {
+    display: inline-block;
+}
+
+.mobile-nav .logo .site-switcher {
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    padding-right: 0;
+    border-radius: $global-radius;
+    text-align: center;
+}
+
+.mobile-nav .left-menu-btn,
+.mobile-nav .right-menu-btn {
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    color: white;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+//-----------------------------------------------------------------
+// Navigation
+//-----------------------------------------------------------------
+
+.navigation {
+    @extend .stage-table-cell;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: $primary-nav-width + $secondary-nav-width;
+    // left: -100%;
+    z-index: -1;
+
+    @media #{$medium-up} {
+        position: static;
+        top: $header-height;
+        left: 0;
+        /*bottom: $footer-height;*/
+        /*width: auto;*/
+    }
+}
+
+//=========================================
+// Primary Nav (Tools Nav)
+//=========================================
+
+.primary-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    // width: 20%;
+    width: $primary-nav-width;
+    height: 100%;
+
+    background: $dark-grey;
+
+    /*overflow: hidden;*/
+
+    @media #{$medium-up} {
+        width: $primary-nav-width;
+    }
+}
+
+.primary-nav a {
+    color: lighten($dark-grey, 60%);
+    display: block;
+    padding: 10px 0;
+    font-size: 0.7rem;
+}
+
+.primary-nav i {
+    font-size: 1.8rem;
+    display: block;
+    line-height: 1;
+}
+
+.primary-nav a:hover {
+    @extend .transition;
+    color: $secondary-color;
+}
+
+.primary-nav .active a {
+    background: darken($dark-grey, 30%);
+    color: white;
+}
+
+//=========================================
+// Seconday Nav (Flyout Nav)
+//=========================================
+
+.secondary-nav {
+    position: absolute;
+    top: 0;
+    left: $primary-nav-width;
+    right: 0;
+    bottom: 0;
+    background: white;
+    // background: #EDF2F8;
+    width: $secondary-nav-width;
+    border-right: 1px solid #D4DCE3;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+
+    @media #{$medium-up} {
+        width: $secondary-nav-width;
+        left: $primary-nav-width;
+    }
+}
+
+.secondary-nav h4 {
+    padding: 15px 15px;
+}
+
+.secondary-nav a {
+    display: block;
+    border-bottom: 1px solid #D4DCE3;
+    color: #676767;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+}
+
+.secondary-nav .active a {
+    // background: darken(#E2E7ED, 10%);
+     background: #5E6E80;
+    // color: #4C5566;
+    color: white;
+    font-weight: 600;
+}
+
+.navigation.closed {
+    width: $primary-nav-width;
+}
+
+.navigation.closed .secondary-nav {
+    display: none;
+}
+
+//-----------------------------------------------------------------
+// Banner
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Breadcrumbs
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Stage
+//-----------------------------------------------------------------
+
+.stage {
+    position: absolute;
+    top: $header-height;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    @media #{$medium-up} {
+		bottom: $footer-height;
+    }
+}
+
+.stage-table {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.stage-table-cell {
+    display: table-cell;
+    vertical-align: top;
+    height: 100%;
+}
+
+//-----------------------------------------------------------------
+// Content
+//-----------------------------------------------------------------
+
+.content-area {
+    @extend .stage-table-cell;
+    position: absolute;
+    background: #F5F6F6;
+    // background: #F6F5F1;
+}
+
+.homepage .content-area {
+    background: #DEDEDE;
+    // background: url(../img/template/bg.png);
+    background-attachment: cover;
+}
+
+.content-scroller {
+    @extend .touch-scrolling;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.main {
+    @extend .stage-table-cell;
+    width: 100%;
+    padding: rem-calc(20 20 0 20);
+}
+
+//-
+
+.content-block {
+    background: #DBDFDF;
+    background: white;
+    background: #FBFAF8;
+    // padding: rem-calc(10 20);
+    margin-bottom: rem-calc(20);
+    // border: 1px solid #D4DCE3;
+    box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.08);
+    // border: 1px solid #C7C0B8;
+}
+
+.sidebar .content-block ul {
+    font-size: rem-calc(14);
+}
+
+.content-block-header {
+    position: relative;
+    background: white;
+    padding: rem-calc(5 60 5 15);
+    border-bottom: 1px solid #D3D3D3;
+}
+
+.content-block-header .minimize-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: rem-calc(44);
+    display: block;
+}
+
+.content-block-header .minimize-btn span {
+    @extend .transition;
+    position: absolute;
+    top: 50%;
+    margin-top: rem-calc(-2);
+    width: rem-calc(25);
+    height: rem-calc(4);
+    background: #6A6A6A;
+}
+
+.content-block-header .minimize-btn:hover span {
+    background: #62CE9A;
+}
+
+.content-block-inner {
+    padding: rem-calc(10 15);
+}
+
+.content-block h2 {
+    font-size: rem-calc(24);
+}
+
+.content-block a {
+    color: #125BA2;
+    // color: white;
+}
+
+//-----------------------------------------------------------------
+// Sections
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Sidebar
+//-----------------------------------------------------------------
+
+.sidebar {
+    @extend .stage-table-cell;
+    position: absolute;
+    top: 0;
+    right: -260px;
+    bottom: 0;
+    background: #EDEFEF;
+    z-index: 10;
+    // border-left: 1px solid #DADCDC;
+
+    @media #{$xlarge-up} {
+    	position: relative;
+    	right: auto;
+        display: table-cell;
+    }
+}
+
+.sidebar-internal {
+    width: $sidebar-width;
+}
+
+.sidebar:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: rem-calc(8);
+    box-shadow: inset 2px -3px 5px rgba(0,0,0,0.06);
+    z-index: 1;
+}
+
+.sidebar.closed {
+    display: none;
+}
+
+//=========================================
+// Sidebar content
+//=========================================
+
+.sidebar p {
+    font-size: rem-calc(14);
+}
+
+//=========================================
+// Tabs
+//=========================================
+
+.sidebar .tabs {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    background: #EDEFEF;
+    padding-bottom: 10px;
+}
+
+.sidebar .tabs i {
+    display: block;
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.sidebar .tabs li {
+    width: 33.3333333%;
+}
+
+.sidebar .tabs a {
+    outline: none;
+    padding: rem-calc(8 0);
+}
+
+.sidebar .tabs .active a {
+    border-bottom: 0;
+}
+
+.sidebar .tabs a {
+    border-bottom: 1px solid #CACDCD;
+    border-right: 1px solid #CACDCD;
+}
+
+.sidebar .tabs li:last-child a {
+    border-right: 0;
+}
+
+.sidebar .tabs-content {
+    padding: rem-calc(0 30 30 30);
+}
+
+//-----------------------------------------------------------------
+// Media Object
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Modules
+//-----------------------------------------------------------------
+
+
+
+//-----------------------------------------------------------------
+// Footer
+//-----------------------------------------------------------------
+
+.footer {
+    // position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 5px 15px 10px 15px;
+    width: 100%;
+    // border-top: 1px solid $border-color-light;
+    background: #222;
+    // background: url(../img/template/footer-gradient.png) repeat-x;
+    overflow: hidden;
+    z-index: 500;
+    // opacity: .3;
+
+    @media #{$medium-up} {
+        position: fixed;
+        height: $footer-height;
+        line-height: $footer-height;
+        padding: 0 15px;
+    }
+}
+
+.footer-links {
+    font-size: 0.74rem;
+    line-height: $footer-height;
+    margin-bottom: 0;
+}
+
+/* needs some bigger gaps */
+
+@media #{$medium-up} {
+    .footer-links a {
+        padding: 0 5px;
+    }
+}
+
+.footer-legal {
+    font-size: 0.7rem;
+    line-height: 0;
+}
+
+.footer a {
+    /*color: #686868;*/
+    color: $primary-color;
+    color: white;
+}
+
+//=========================================
+// Footer Links
+//=========================================
+//-----------------------------------------------------------------
+// Social Networks
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Template Buttons
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Forms
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Tooltips
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Animations
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Special (Shame.css)
+//-----------------------------------------------------------------
+
+.row.is-full-width {
+    max-width: none;
+}
+
+.transition {
+    -webkit-transition: all 200ms ease-out 0.2s;
+    -moz-transition: all 200ms ease-out 0.2s;
+    -o-transition: all 200ms ease-out 0.2s;
+    transition: all 200ms ease-out 0.2s;
+}
+
+.touch-scrolling {
+    -webkit-overflow-scrolling: touch;
+}
+
+//-----------------------------------------------------------------
+// Themes
+//-----------------------------------------------------------------
+//=========================================
+//
+//=========================================

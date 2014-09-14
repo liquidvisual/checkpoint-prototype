@@ -1,0 +1,14 @@
+# Configure Homepage Banners here
+
+ - title: Federal Budget 2014
+   description: Thomson Reuters - your leading source for Federal Budget News
+   img_path: http://placehold.it/1440x350 #'img/content/banner-1.jpg'
+   link_url: http://google.com
+   link_label: Get your free report
+
+ - title: Westlaw AU Online Legal research
+   description: From case law to precedents. Go straight to what you're looking for.
+   img_path: http://placehold.it/1440x350 #'img/content/banner-2.jpg'
+   link_url: http://google.com
+   link_label: Request a Demonstration
+   link_label_color: FF00B2
