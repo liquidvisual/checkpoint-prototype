@@ -61,6 +61,11 @@
         {% include navigation_off_canvas.html %}
     </nav>
 
+    <!-- OFF-CANVAS MENU (LEFT) -->
+    <nav id="off-canvas-menu-right" class="hide" aria-hidden="true">
+        {% include navigation_off_canvas_right.html %}
+    </nav>
+
     <!--[if lt IE 9]>
     <div class="lv-alert lv-unselectable">
         <p>Your browser is out of date. Please <a href="http://outdatedbrowser.com">upgrade</a> to experience more of the web.</p>
@@ -87,6 +92,12 @@
             $("#off-canvas-menu-left").mmenu({
                "offCanvas": {
                   "position": "left"
+               }
+            });
+
+            $("#off-canvas-menu-right").mmenu({
+               "offCanvas": {
+                  "position": "right"
                }
             });
          });

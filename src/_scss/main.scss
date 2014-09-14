@@ -388,6 +388,11 @@ body {
     z-index: 10;
     // border-left: 1px solid #DADCDC;
 
+    @media (max-width: 768px) {
+        display: none;
+    }
+
+
     @media #{$xlarge-up} {
     	position: relative;
     	right: auto;
@@ -605,6 +610,40 @@ body {
 //-----------------------------------------------------------------
 // Special / Misc - Refactor (Shame.css)
 //-----------------------------------------------------------------
+
+.checkboxes .checkbox {
+    width: 20px;
+    line-height: 0;
+}
+
+.f-dropdown {
+    margin-left: -133px;
+}
+
+.profile {
+    padding: rem-calc(10 30 10 10);
+}
+
+.profile h5 {
+    color: white;
+    font-weight: 600;
+    font-size: rem-calc(20);
+    margin-bottom: 0;
+}
+
+.profile span {
+    color: white;
+    font-weight: 600;
+}
+
+.profile-pic {
+    padding-left: rem-calc(15);
+
+}
+
+.profile-pic img {
+    border: 1px solid darken(#EE814A, 15%);
+}
 
 .row.is-full-width {
     max-width: none;

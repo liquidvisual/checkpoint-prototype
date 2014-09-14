@@ -32,7 +32,8 @@ $('.lv-alert .close-btn').click(function(){$(this).parent().hide();});
 $(document).keypress(function(event) {
     if (event.which == 115 && (event.ctrlKey||event.metaKey)|| (event.which == 19)) {
         event.preventDefault();
-        console.log("(w) "+$(window).width()+" (h) "+$(window).height());
+        alert("(w) "+$(window).width()+" (h) "+$(window).height());
+
         return false;
     }
     return true;
