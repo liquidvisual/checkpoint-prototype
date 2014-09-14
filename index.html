@@ -33,7 +33,7 @@
             <header class="header">
                 <section class="mobile-nav show-for-small-only">
     <a class="left-menu-btn left" href="#off-canvas-menu-left"><span class="hit-area"><i class="fi-list"></i></span></a>
-    <a class="right-menu-btn right" href="#"><span class="hit-area"><i class="fi-results-demographics"></span></i></a>
+    <a class="right-menu-btn right" href="#off-canvas-menu-right"><span class="hit-area"><i class="fi-results-demographics"></span></i></a>
     <span class="logo">
         <span class="hit-area">
             <select class="site-switcher">
@@ -46,7 +46,29 @@
     </span>
 </section>
 
-<a class="logo show-for-medium-up" href="/"><img src="/assets/img/content/logo.png" alt=""></a>
+<a class="logo left show-for-medium-up" href="/"><img src="/assets/img/content/logo.png" alt=""></a>
+
+<div class="profile right text-right show-for-medium-up">
+  <div class="left">
+    <h5>Mitchell Warren</h5>
+    <span>Logout</span>
+  </div>
+  <a class="right profile-pic" href="#" data-options="align:bottom" data-dropdown="hover1">
+    <img width="50" src="/assets/img/ui/no-face.png" alt="Profile Pic">
+
+    <ul id="hover1" class="f-dropdown text-left" data-dropdown-content>
+      <li><a href="#">Contacts</a></li>
+      <li><a href="#">History</a></li>
+      <li><a href="#">Preferences</a></li>
+      <li><a href="#">Client ID</a></li>
+      <li><a href="#">Help</a></li>
+      <li><a href="#">Feedback</a></li>
+    </ul>
+  </a>
+</div>
+
+
+
 
 <div class="row is-full-width">
   <div class="columns">
@@ -419,6 +441,19 @@
 </ul>
     </nav>
 
+    <!-- OFF-CANVAS MENU (LEFT) -->
+    <nav id="off-canvas-menu-right" class="hide" aria-hidden="true">
+        <ul>
+    <li><a href="#"><img width="30" src="/img/content/liquid-logo.png" alt="Liquid Logo"> Mitchell Warren<br><small>mitchell.warren@thomsonreuters.com</small></a></li>
+    <li><a href="#">Contacts</a></li>
+    <li><a href="#">History</a></li>
+    <li><a href="#">Preferences</a></li>
+    <li><a href="#">Client ID</a></li>
+    <li><a href="#">Help</a></li>
+    <li><a href="#">Feedback</a></li>
+</ul>
+    </nav>
+
     <!--[if lt IE 9]>
     <div class="lv-alert lv-unselectable">
         <p>Your browser is out of date. Please <a href="http://outdatedbrowser.com">upgrade</a> to experience more of the web.</p>
@@ -437,6 +472,12 @@
             $("#off-canvas-menu-left").mmenu({
                "offCanvas": {
                   "position": "left"
+               }
+            });
+
+            $("#off-canvas-menu-right").mmenu({
+               "offCanvas": {
+                  "position": "right"
                }
             });
          });
