@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]>       <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if lt IE 9]>       <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]>          <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!-->  <html class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Research</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
+
+    <link rel="stylesheet" href="/assets/css/optimized.css"/>
+
+    <script src="/assets/scripts/priority-optimized.js"></script>
+
+	<!--[if lt IE 9]>
+	<script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+	<script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+    <div class="lv-super">
+        <div class="lv-page">
+
+            <!-- HEADER -->
+            <header class="header">
+                <section class="mobile-nav show-for-small-only">
+    <a class="left-menu-btn left" href="#"><span class="hit-area"><i class="fi-list"></i></span></a>
+    <a class="right-menu-btn right" href="#"><span class="hit-area"><i class="fi-results-demographics"></span></i></a>
+    <span class="logo">
+        <span class="hit-area">
+            <select class="site-switcher">
+                <option value="husker">Checkpoint</option>
+                <option value="starbuck">Westlaw NZ</option>
+                <option value="hotdog">Westlaw USA</option>
+                <option value="apollo">Westlaw CAN</option>
+            </select>
+        </span>
+    </span>
+</section>
+
+<a class="logo show-for-medium-up" href="/"><img src="/assets/img/content/logo.png" alt=""></a>
+
+<div class="row is-full-width">
+  <div class="columns">
+    <!-- <a href="#"><img src="http://placehold.it/300x100/4768B0/ffffff&text=Westlaw Au" alt=""></a> -->
+    <!-- <select>
+      <option value="husker">Husker</option>
+      <option value="starbuck">Starbuck</option>
+      <option value="hotdog">Hot Dog</option>
+      <option value="apollo">Apollo</option>
+    </select> -->
+  </div>
+</div>
+
+<script>
+  window.onload = function() {
+    $('.left-menu-btn').click(function(){
+        $('.lv-page').css(
+        {
+          "position": "absolute",
+          "left": "325px"
+
+        });
+    });
+
+    $('#temp-return').click(function(){
+        // $('.lv-page').animate({left: "0"}, 300, 'linear', function(){});
+        alert('wot');
+    });
+
+  };
+</script>
+            </header>
+
+            <!-- STAGE -->
+            <section class="stage  internal ">
+                <div class="stage-table">
+
+    <!-- NAVIGATION -->
+    <nav class="navigation ">
+        <section class="primary-nav">
+    <ul class="no-bullet text-center">
+        <li class=""><a href="/"><i class="fi-home"></i> Home</a></li>
+        <li class=" active "><a href="/research/"><i class="fi-magnifying-glass"></i> Research</a></li>
+        <li class=""><a href="/workflow/"><i class="fi-graph-bar"></i> Workflow</a></li>
+        <li class=""><a href="/tools/"><i class="fi-wrench"></i> Tools</a></li>
+        <li class=""><a href="/learning/"><i class="fi-info"></i> Learning</a></li>
+        <li class=""><a href="/alerts/"><i class="fi-alert"></i> Alerts</a></li>
+        <li class=""><a href="/history/"><i class="fi-clock"></i> History</a></li>
+    </ul>
+</section>
+
+<section class="secondary-nav">
+    <h4 id="temp-return" class="text-center">Search Templates</h4>
+    <ul class="no-bullet">
+        <li class="active"><a href="#">Basic</a></li>
+        <li><a href="#">Cases</a></li>
+        <li><a href="#">Legislation / Commentary</a></li>
+        <li><a href="#">Journals</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Government and Regulatory</a></li>
+    </ul>
+</section>
+
+
+    </nav>
+
+    <!-- CONTENT AREA -->
+    <div class="content-area">
+        <div class="content-scroller">
+
+            <!-- MAIN -->
+            <main class="main">
+                <form data-abide novalidate id="contact" action="/" method="post">
+    <div class="row collapse postfix-radius">
+        <div class="small-12 medium-10 columns">
+            <input name="q" class="text-center" type="text" placeholder="Type Keywords">
+        </div>
+        <div class="hide-for-small medium-2 columns">
+            <button type="submit" class="button flat radius postfix">Search</button>
+        </div>
+    </div>
+</form>
+
+<div class="row">
+    <div class="columns">
+        <hr>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="medium-8 columns">
+        <h3>Restrict Search</h3>
+    </div>
+    <div class="medium-4 columns">
+        <select>
+            <option value="husker">Content Type</option>
+            <option value="starbuck">Westlaw NZ</option>
+            <option value="hotdog">Westlaw USA</option>
+            <option value="apollo">Westlaw CAN</option>
+        </select>
+    </div>
+</div>
+
+<div class="row">
+    <div class="columns">
+        <ul>
+    <li>Select All
+        <ul>
+            <li><a href="#">Some Link</a></li>
+            <li><a href="#">Some Link</a></li>
+            <li><a href="#">Some Link</a></li>
+            <li><a href="#">Some Link</a></li>
+            <li><a href="#">Some Link</a></li>
+        </ul>
+    </li>
+</ul>
+    </div>
+</div>
+
+
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione odio blanditiis nemo repudiandae explicabo totam, facere sunt? Neque alias dicta fuga sunt. Expedita in qui veritatis quam, nemo aspernatur repellendus labore minus neque, facilis sit corrupti non animi maiores? Dolor asperiores dolore neque nobis. Quas iusto quam itaque? Animi vel cumque reiciendis, at officia eaque excepturi sequi sunt, labore repellat quaerat nihil incidunt. Vel corporis officia, quia numquam sapiente aliquam magnam inventore suscipit dolores aut voluptatum magni accusantium adipisci quae eius sed totam voluptate incidunt. Earum, esse eos aliquid, reiciendis eveniet aspernatur. Nam vero optio, laboriosam ea labore minus molestiae voluptatum dolores ratione earum eligendi, aut molestias, porro iusto neque asperiores dolor nisi perferendis et ab quis adipisci, maiores quibusdam. Iure voluptate rem error laudantium impedit dolor saepe, obcaecati, perferendis debitis assumenda mollitia ut sint eligendi quis nisi voluptas! Porro nihil fuga in sint sunt molestias, deserunt accusantium, ab molestiae quos enim natus soluta distinctio, voluptatibus nam ratione tenetur dolores eaque hic consequatur ad id officia rem numquam! Unde nihil pariatur illo labore, ratione dolor. Nulla vitae qui voluptate dolorem porro sapiente quos magnam obcaecati officia reprehenderit, harum fugit, itaque ea debitis quam illo? Sapiente deserunt doloribus itaque dicta eos aliquid quibusdam quasi deleniti consequatur magnam. Fugit, sit illum nam ratione dicta, nihil officiis.</p>
+
+<p> Aperiam laudantium ea, aspernatur explicabo officiis reprehenderit adipisci aliquam voluptas maxime, placeat dignissimos quam atque, suscipit, numquam dolor non beatae totam delectus doloremque quaerat. Dolorum nobis doloremque, aspernatur laudantium architecto, commodi, quasi facilis adipisci cumque dicta totam asperiores corrupti itaque eligendi libero tenetur incidunt. Quisquam eligendi voluptatem quod libero molestias explicabo pariatur provident, autem vel accusamus aliquam, ipsa quos! Possimus quibusdam nam quisquam ad eum itaque, id dicta magnam blanditiis laudantium accusantium corporis fugit! Sequi, minus, molestiae. Earum molestiae a magnam quis saepe omnis perspiciatis. Ratione assumenda, a commodi pariatur! Dolores corporis, dolor consectetur fuga debitis, ut inventore expedita perspiciatis officia voluptas quae ullam ducimus. Sit dolorem nobis sequi sunt odit facere cum neque, fuga amet tempora adipisci non aliquid ducimus praesentium omnis vero, explicabo, reiciendis eos consectetur rerum. Rem temporibus voluptates dolores nesciunt, </p>
+
+<p>accusamus totam aut debitis id impedit reiciendis distinctio vero ducimus ipsa alias perspiciatis exercitationem est, obcaecati cupiditate nihil molestias dolor. Unde cumque magni fugiat vitae quis nostrum sapiente recusandae nisi veritatis sint accusamus aliquam, repudiandae amet praesentium, esse beatae odio. Reprehenderit non architecto, esse eveniet cumque in corporis minus incidunt id, magni ducimus doloribus quas rerum rem enim dolore deserunt maiores dignissimos neque sint eligendi. Dolore sint consectetur totam aspernatur, necessitatibus commodi cum quos molestias! Sint tempore unde maiores esse nisi officiis totam, non ratione expedita eius deserunt voluptatibus obcaecati sunt quaerat sit assumenda, minima numquam quisquam. Ex suscipit commodi culpa nesciunt, ea debitis iste rem ipsam ullam voluptatem esse, facere placeat, tempore perspiciatis accusantium, repudiandae. Eveniet, eos! Harum quaerat corporis voluptatem exercitationem error sunt vero aut accusamus non! Doloremque quo voluptatem corrupti et aut, vel explicabo ex. Nobis quisquam quas quis saepe voluptas at aperiam repellendus, commodi vitae, possimus, et, consequatur!</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione odio blanditiis nemo repudiandae explicabo totam, facere sunt? Neque alias dicta fuga sunt. Expedita in qui veritatis quam, nemo aspernatur repellendus labore minus neque, facilis sit corrupti non animi maiores? Dolor asperiores dolore neque nobis. Quas iusto quam itaque? Animi vel cumque reiciendis, at officia eaque excepturi sequi sunt, labore repellat quaerat nihil incidunt. Vel corporis officia, quia numquam sapiente aliquam magnam inventore suscipit dolores aut voluptatum magni accusantium adipisci quae eius sed totam voluptate incidunt. Earum, esse eos aliquid, reiciendis eveniet aspernatur. Nam vero optio, laboriosam ea labore minus molestiae voluptatum dolores ratione earum eligendi, aut molestias, porro iusto neque asperiores dolor nisi perferendis et ab quis adipisci, maiores quibusdam. Iure voluptate rem error laudantium impedit dolor saepe, obcaecati, perferendis debitis assumenda mollitia ut sint eligendi quis nisi voluptas! Porro nihil fuga in sint sunt molestias, deserunt accusantium, ab molestiae quos enim natus soluta distinctio, voluptatibus nam ratione tenetur dolores eaque hic consequatur ad id officia rem numquam! Unde nihil pariatur illo labore, ratione dolor. Nulla vitae qui voluptate dolorem porro sapiente quos magnam obcaecati officia reprehenderit, harum fugit, itaque ea debitis quam illo? Sapiente deserunt doloribus itaque dicta eos aliquid quibusdam quasi deleniti consequatur magnam. Fugit, sit illum nam ratione dicta, nihil officiis.</p>
+
+<p> Aperiam laudantium ea, aspernatur explicabo officiis reprehenderit adipisci aliquam voluptas maxime, placeat dignissimos quam atque, suscipit, numquam dolor non beatae totam delectus doloremque quaerat. Dolorum nobis doloremque, aspernatur laudantium architecto, commodi, quasi facilis adipisci cumque dicta totam asperiores corrupti itaque eligendi libero tenetur incidunt. Quisquam eligendi voluptatem quod libero molestias explicabo pariatur provident, autem vel accusamus aliquam, ipsa quos! Possimus quibusdam nam quisquam ad eum itaque, id dicta magnam blanditiis laudantium accusantium corporis fugit! Sequi, minus, molestiae. Earum molestiae a magnam quis saepe omnis perspiciatis. Ratione assumenda, a commodi pariatur! Dolores corporis, dolor consectetur fuga debitis, ut inventore expedita perspiciatis officia voluptas quae ullam ducimus. Sit dolorem nobis sequi sunt odit facere cum neque, fuga amet tempora adipisci non aliquid ducimus praesentium omnis vero, explicabo, reiciendis eos consectetur rerum. Rem temporibus voluptates dolores nesciunt, </p>
+
+<p>accusamus totam aut debitis id impedit reiciendis distinctio vero ducimus ipsa alias perspiciatis exercitationem est, obcaecati cupiditate nihil molestias dolor. Unde cumque magni fugiat vitae quis nostrum sapiente recusandae nisi veritatis sint accusamus aliquam, repudiandae amet praesentium, esse beatae odio. Reprehenderit non architecto, esse eveniet cumque in corporis minus incidunt id, magni ducimus doloribus quas rerum rem enim dolore deserunt maiores dignissimos neque sint eligendi. Dolore sint consectetur totam aspernatur, necessitatibus commodi cum quos molestias! Sint tempore unde maiores esse nisi officiis totam, non ratione expedita eius deserunt voluptatibus obcaecati sunt quaerat sit assumenda, minima numquam quisquam. Ex suscipit commodi culpa nesciunt, ea debitis iste rem ipsam ullam voluptatem esse, facere placeat, tempore perspiciatis accusantium, repudiandae. Eveniet, eos! Harum quaerat corporis voluptatem exercitationem error sunt vero aut accusamus non! Doloremque quo voluptatem corrupti et aut, vel explicabo ex. Nobis quisquam quas quis saepe voluptas at aperiam repellendus, commodi vitae, possimus, et, consequatur!</p>
+
+
+
+
+            </main>
+
+            <!-- SIDEBAR -->
+            <aside class="sidebar ">
+                <div class="sidebar-internal">
+                    <ul id="fixedScroll" class="tabs text-center" data-tab role="tablist">
+  <li class="tab-title active" role="presentational">
+    <a href="#details" role="tab" tabindex="0" aria-selected="true" controls="panel2-1"><i class="fi-eye"></i> Details</a>
+  </li>
+  <li class="tab-title" role="presentational">
+    <a href="#pins" role="tab" tabindex="0" aria-selected="false" controls="panel2-2"><i class="fi-flag"></i> Pins</a>
+  </li>
+  <li class="tab-title" role="presentational">
+    <a href="#collapse" role="tab" tabindex="0" aria-selected="false" controls="panel2-3"><i class="fi-arrow-right"></i> Collapse</a>
+  </li>
+</ul>
+
+<div class="tabs-content">
+  <section role="tabpanel" aria-hidden="false" class="content active" id="details">
+    <h3>Tips for Searching</h3>
+    <p>Weslaw supports the use of a number of different connectors. The most common are <strong>AND</strong> and <strong>OR</strong>. By default if multiple terms are entered without connectors, Westlaw will automatically insert the <strong>'&amp;' (AND)</strong> connector in between each term.</p>
+    <p>Usable connectors, their symbols and examples are available below.</p>
+    <p><a href="#" class="button small radius knockout">See All Connectors</a></p>
+    <hr>
+    <h3>Need Assistance?</h3>
+    <p>Don't hesitate to call our Customer Help Desk on the number below.</p>
+    <p><a href="#" class="button small radius knockout">1800 020 548</a></p>
+  </section>
+  <section role="tabpanel" aria-hidden="true" class="content" id="pins">
+
+    <!-- BLOCK -->
+
+        
+        <div class="content-block">
+    <div class="content-block-header">
+        <h2>My Pins</h2>
+        <a title="Minimize" class="minimize-btn" href="#"><span></span></a>
+    </div>
+    <div class="content-block-inner">
+        
+            <ul>
+                <li><a href="#">Contact Details</a></li>
+                <li><a href="#">Account Management Details</a></li>
+                <li><a href="#">Thomson Reuters Website (AU)</a></li>
+                <li><a href="#">Thomson Reuters Website (NZ)</a></li>
+            </ul>
+        
+    </div>
+</div>
+
+
+
+  </section>
+</div>
+
+
+                </div>
+            </aside>
+
+            <!-- FOOTER -->
+            <footer class="footer hide-for-medium-up">
+                <div class="row collapse is-full-width">
+    <div class="medium-6 medium-push-6 columns">
+        <ul class="footer-links lv-inline-list text-center medium-text-right">
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Feedback</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+        </ul>
+    </div>
+    <div class="medium-6 medium-pull-6 columns">
+        <div class="text-center medium-text-left">
+            <small class="footer-legal">&copy; <b>2014</b> <a href="#">Thomson Reuters</a> (Professional) Australia LTD - ABN 64 058 668</small>
+        </div>
+    </div>
+</div>
+            </footer>
+
+        </div> <!-- .content-scroller -->
+    </div> <!-- .content-area -->
+
+</div> <!-- .stage-internal -->
+            </div> <!-- .stage -->
+
+            <!-- FOOTER -->
+            <footer class="footer hide-for-small-only">
+                <div class="row collapse is-full-width">
+    <div class="medium-6 medium-push-6 columns">
+        <ul class="footer-links lv-inline-list text-center medium-text-right">
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Feedback</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+        </ul>
+    </div>
+    <div class="medium-6 medium-pull-6 columns">
+        <div class="text-center medium-text-left">
+            <small class="footer-legal">&copy; <b>2014</b> <a href="#">Thomson Reuters</a> (Professional) Australia LTD - ABN 64 058 668</small>
+        </div>
+    </div>
+</div>
+            </footer>
+
+        </div> <!-- .lv-page -->
+    </div> <!-- .lv-super -->
+
+    <!-- ***** JAVASCRIPT ***** -->
+
+    <script src="/assets/scripts/optimized.js"></script>
+
+    <script>$(document).foundation();</script>
+
+    <!-- Google Analytics Here -->
+
+    <!-- No Javascript Warning -->
+    <noscript>
+        <div class="lv-alert lv-unselectable">
+            <p>Your browser has Javascript disabled. Some features may be limited.</p>
+            <span class="close-btn hide">&times;</span>
+        </div>
+    </noscript>
+
+</body>
+</html>
