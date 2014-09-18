@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]>       <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if lt IE 9]>       <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]>          <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!-->  <html class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Checkpoint Prototype</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
+
+    <link rel="stylesheet" href="/assets/css/optimized.css"/>
+
+    <script src="/assets/scripts/priority-optimized.js"></script>
+
+	<!--[if lt IE 9]>
+	<script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+	<script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+    <div class="lv-super developerX">
+        <div class="lv-page  ">
+
+            <!-- HEADER -->
+            <header class="header">
+                <section class="text-center large-text-left">
+	<a class="mobile-nav-btn left" href="#off-canvas-menu-left"><i class="fi-list"></i></a>
+	<a class="mobile-nav-btn right hide-for-large-up" href="#off-canvas-menu-right"><i class="fi-results-demographics"></i></a>
+	<ul class="inline-list logo-switcher-wrapper">
+		<li>
+			<a title="Checkpoint®" class="logo show-for-medium-up" href="/">
+				<img src="/assets/img/content/logo.png" alt="Checkpoint">
+			</a>
+		</li>
+		<li>
+			<div class="country-toggle">
+				<select>
+					<option value="au">Australia</option>
+					<option value="nz">New Zealand</option>
+				</select>
+			</div>
+		</li>
+	</ul>
+</section>
+
+<section class="user-profile right text-right show-for-large-up">
+	<div class="left">
+		<strong class="user-profile-title">Jason Chen</strong>
+		<a class="logout-btn" href="#">LOGOUT</a>
+	</div>
+	<a class="right user-profile-pic" href="#">
+		<img width="40" src="/assets/img/ui/no-face.png" alt="Profile Pic">
+	</a>
+</section>
+            </header>
+
+            <!-- STAGE -->
+            <section class="stage">
+
+                <!-- NAVIGATION -->
+                <nav class="navigation">
+                    <div class="nav-table-wrapper">
+
+    <section class="primary-nav">
+        <ul class="no-bullet text-center">
+            <li class=""><a href="/"><i class="fi-home"></i> Home</a></li>
+            <li class=""><a href="/research/cases/"><i class="fi-magnifying-glass"></i> Research</a></li>
+            <!-- <li class=""><a href="/workflow/"><i class="fi-graph-bar"></i> Workflow</a></li>
+            <li class=""><a href="/tools/"><i class="fi-wrench"></i> Tools</a></li>
+            <li class=""><a href="/learning/"><i class="fi-info"></i> Learning</a></li>
+            <li class=""><a href="/alerts/"><i class="fi-alert"></i> Alerts</a></li>
+            <li class=""><a href="/history/"><i class="fi-clock"></i> History</a></li> -->
+        </ul>
+    </section>
+
+    <section class="secondary-nav">
+        <h4 class="text-center">Search Templates</h4>
+        <ul class="no-bullet">
+            <li><a href="#">Basic</a></li>
+            <li class="active"><a href="/research/cases/">Cases</a></li>
+            <li><a href="/research/cases/">Legislation / Commentary</a></li>
+            <li><a href="/research/cases/">Journals</a></li>
+            <li><a href="/research/cases/">News</a></li>
+            <li><a href="/research/cases/">Government and Regulatory</a></li>
+        </ul>
+    </section>
+
+</div>
+                </nav>
+
+                <!-- MAIN -->
+                <main class="main">
+                    <div class="row">
+    <div class="columns">
+        <h3>Refine your Search</h3>
+        <hr>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 large-10 large-centered columns">
+        <form data-abide novalidate id="contact" action="/" method="post">
+            <div class="row collapse postfix-radius">
+                <div class="small-12 medium-9 columns">
+                    <input name="q" class="text-center" type="text" placeholder="Type Keywords to Refine Search">
+                </div>
+                <div class="hide-for-small medium-3 columns">
+                    <button type="submit" class="button flat radius postfix">Refine Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="columns">
+        <h3>Search Results <span class="label round secondary">35</span></h3>
+        <hr>
+    </div>
+</div>
+
+<div class="row">
+    <div class="medium-6 columns">
+        <a href="#" class="button medium radius">Actions</a>
+    </div>
+    <div class="medium-6 columns">
+        <div class="row">
+            <div class="medium-4 columns">
+                <select>
+                    <option value="">Most</option>
+                    <option value="">Westlaw NZ</option>
+                    <option value="">Westlaw USA</option>
+                    <option value="">Westlaw CAN</option>
+                </select>
+            </div>
+            <div class="medium-8 columns">
+                <select>
+                    <option value="">Relevance</option>
+                    <option value="">Westlaw NZ</option>
+                    <option value="">Westlaw USA</option>
+                    <option value="">Westlaw CAN</option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="columns">
+
+
+
+<form id="resultsContainerForm">
+    
+    <div order="1" class="result clearfix">
+        <div class="resultCheckBox">
+            <input value="1" class="documentSelection" type="checkBox">
+        </div>
+
+        <dl class="resultMetadata clearfix">
+            <dt class="titleLabel">
+                <strong>Title:</strong>
+            </dt>
+            <dd class="titleBody">
+                <span class="docRank">1. </span>
+                <strong><a href="/maf/app/document?ao=o.AUNZ_TOC||Iec7746151d273285a1ec7b666b3f21ca&amp;srguid=ia744c097000001488377ca6a4ecf4321&amp;docguid=Ifc3193e04bdd11e38fa3f057ed117a82&amp;startChunk=1&amp;endChunk=1&amp;epos=1&amp;isTocNav=true&amp;tocDs=AUNZ_AU_ACCTING_TOC" class="documentLink" id="lnkResultDoc_Ifc3193e04bdd11e38fa3f057ed117a82">Introduction</a></strong>
+            </dd>
+            <dt class="itemLabel"><strong>Content type: </strong></dt>
+            <dd class="contentTypeBody">Commentary</dd>
+            <dt class="itemLabel">
+                <strong>Product Title:</strong>
+            </dt>
+            <dd class="productTitleBody">Environmental Audit Guidebook</dd>
+            <dt class="itemLabel">
+                <strong>Jurisdiction: </strong>
+            </dt>
+            <dd class="jurisdictionBody">Australia </dd>
+            <dt class="itemLabel">
+                <strong>Document Path: </strong>
+            </dt>
+            <dd class="documentPathBody">
+                <ul class="path.block">
+                    <li>Environmental Audit Guidebook &gt;
+                        <a href="/maf/app/tocectory?tocguid=AUNZ_AU_ACCTING_TOC||If9b919c94bdd11e38fa3f057ed117a82" id="lnkResultPath_AUNZ_AU_ACCTING_TOC||If9b919c94bdd11e38fa3f057ed117a82">Conducting an environmental audit</a> &gt; <a href="/maf/app/tocectory?tocguid=AUNZ_AU_ACCTING_TOC||Ifc316cde4bdd11e38fa3f057ed117a82" id="lnkResultPath_AUNZ_AU_ACCTING_TOC||Ifc316cde4bdd11e38fa3f057ed117a82">Environmental auditing standards and guidance</a> &gt; Introduction
+                    </li>
+                </ul>
+            </dd>
+
+            <dt class="itemLabel" style="display: block;">
+                <strong>Hit terms in context:&nbsp;</strong>
+            </dt>
+            <dd class="hitTermsInContextBody" style="display: block;">
+                <p class="snippet">... and guidelines Standards Australia LBNL–3991E Industrial Energy Audit Guidebook: Guidelines for Conducting an Energy Audit in Industrial Facilities Ernest <span style="background-color:#FFE8B2;padding:2px;" class="nhit"><a href="/maf/app/document?&amp;src=search&amp;docguid=Ifc3193e04bdd11e38fa3f057ed117a82&amp;epos=1&amp;snippets=true&amp;srguid=ia744c097000001488377ca6a4ecf4321&amp;fcwh=true&amp;startChunk=1&amp;endChunk=1&amp;nstid=std-anz-highlight&amp;nsds=AUNZ_CA_ENVAUGUIDE&amp;isTocNav=true&amp;tocDs=AUNZ_AU_ACCTING_TOC&amp;context=56&amp;extLink=false&amp;anchor=nhit-1216" class="documentLink" name="docPosition1" docguid="Ifc3193e04bdd11e38fa3f057ed117a82" id="lnkResultDoc_Ifc3193e04bdd11e38fa3f057ed117a82">Orlando</a></span> Lawrence Berkeley National Laboratory BS EN 16247-1:2012 Energy audits Part 1: General requirements The British Standards Institution BS...</p>
+            </dd>
+        </dl>
+    </div>
+    
+    <div order="1" class="result clearfix">
+        <div class="resultCheckBox">
+            <input value="1" class="documentSelection" type="checkBox">
+        </div>
+
+        <dl class="resultMetadata clearfix">
+            <dt class="titleLabel">
+                <strong>Title:</strong>
+            </dt>
+            <dd class="titleBody">
+                <span class="docRank">1. </span>
+                <strong><a href="/maf/app/document?ao=o.AUNZ_TOC||Iec7746151d273285a1ec7b666b3f21ca&amp;srguid=ia744c097000001488377ca6a4ecf4321&amp;docguid=Ifc3193e04bdd11e38fa3f057ed117a82&amp;startChunk=1&amp;endChunk=1&amp;epos=1&amp;isTocNav=true&amp;tocDs=AUNZ_AU_ACCTING_TOC" class="documentLink" id="lnkResultDoc_Ifc3193e04bdd11e38fa3f057ed117a82">Introduction</a></strong>
+            </dd>
+            <dt class="itemLabel"><strong>Content type: </strong></dt>
+            <dd class="contentTypeBody">Commentary</dd>
+            <dt class="itemLabel">
+                <strong>Product Title:</strong>
+            </dt>
+            <dd class="productTitleBody">Environmental Audit Guidebook</dd>
+            <dt class="itemLabel">
+                <strong>Jurisdiction: </strong>
+            </dt>
+            <dd class="jurisdictionBody">Australia </dd>
+            <dt class="itemLabel">
+                <strong>Document Path: </strong>
+            </dt>
+            <dd class="documentPathBody">
+                <ul class="path.block">
+                    <li>Environmental Audit Guidebook &gt;
+                        <a href="/maf/app/tocectory?tocguid=AUNZ_AU_ACCTING_TOC||If9b919c94bdd11e38fa3f057ed117a82" id="lnkResultPath_AUNZ_AU_ACCTING_TOC||If9b919c94bdd11e38fa3f057ed117a82">Conducting an environmental audit</a> &gt; <a href="/maf/app/tocectory?tocguid=AUNZ_AU_ACCTING_TOC||Ifc316cde4bdd11e38fa3f057ed117a82" id="lnkResultPath_AUNZ_AU_ACCTING_TOC||Ifc316cde4bdd11e38fa3f057ed117a82">Environmental auditing standards and guidance</a> &gt; Introduction
+                    </li>
+                </ul>
+            </dd>
+
+            <dt class="itemLabel" style="display: block;">
+                <strong>Hit terms in context:&nbsp;</strong>
+            </dt>
+            <dd class="hitTermsInContextBody" style="display: block;">
+                <p class="snippet">... and guidelines Standards Australia LBNL–3991E Industrial Energy Audit Guidebook: Guidelines for Conducting an Energy Audit in Industrial Facilities Ernest <span style="background-color:#FFE8B2;padding:2px;" class="nhit"><a href="/maf/app/document?&amp;src=search&amp;docguid=Ifc3193e04bdd11e38fa3f057ed117a82&amp;epos=1&amp;snippets=true&amp;srguid=ia744c097000001488377ca6a4ecf4321&amp;fcwh=true&amp;startChunk=1&amp;endChunk=1&amp;nstid=std-anz-highlight&amp;nsds=AUNZ_CA_ENVAUGUIDE&amp;isTocNav=true&amp;tocDs=AUNZ_AU_ACCTING_TOC&amp;context=56&amp;extLink=false&amp;anchor=nhit-1216" class="documentLink" name="docPosition1" docguid="Ifc3193e04bdd11e38fa3f057ed117a82" id="lnkResultDoc_Ifc3193e04bdd11e38fa3f057ed117a82">Orlando</a></span> Lawrence Berkeley National Laboratory BS EN 16247-1:2012 Energy audits Part 1: General requirements The British Standards Institution BS...</p>
+            </dd>
+        </dl>
+    </div>
+    
+</form>
+
+   </div>
+</div>
+                </main>
+
+                <!-- SIDEBAR -->
+                <aside class="sidebar">
+                    <ul id="fixedScroll" class="tabs text-center" data-tab role="tablist">
+	<li class="tab-title active" role="presentational">
+		<a href="#details" role="tab" tabindex="0" aria-selected="true" controls="panel2-1"><i class="fi-eye"></i> Details</a>
+	</li>
+	<li class="tab-title" role="presentational">
+		<a href="#pins" role="tab" tabindex="0" aria-selected="false" controls="panel2-2"><i class="fi-flag"></i> Links</a>
+	</li>
+	<li class="tab-title" role="presentational">
+		<a href="#collapse" role="tab" tabindex="0" aria-selected="false" controls="panel2-3"><i class="fi-arrow-right"></i> Collapse</a>
+	</li>
+</ul>
+<div class="tabs-content">
+	<section role="tabpanel" aria-hidden="false" class="content active" id="details">
+		
+			<h4>How Sorting is Ordered</h4><p>Relevance is determined by two factors (1) the number of times your search terms appear in a document and (2) the proximity of those search terms to each other.</p><p>Weighted is based upon the location of the keywords in a document (hits). Hits found in one document field will be assigned priority (weighting) over hits in another document field.</p><p><strong>Note: All current documents will have precedence over archived documents</strong></p>
+		
+	</section>
+	<section role="tabpanel" aria-hidden="true" class="content" id="pins">
+		<h2>Second panel content goes here...</h2>
+	</section>
+</div>
+
+
+                </aside>
+
+            </section>
+
+            <!-- FOOTER -->
+            <footer class="footer">
+                <div class="row collapse is-full-width">
+    <div class="medium-6 medium-push-6 columns">
+        <ul class="footer-links lv-inline-list text-center medium-text-right">
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Feedback</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+        </ul>
+    </div>
+    <div class="medium-6 medium-pull-6 columns">
+        <div class="text-center medium-text-left">
+            <small class="footer-legal">&copy; <b>2014</b> <a href="#">Thomson Reuters</a> (Professional) Australia LTD - ABN 64 058 668</small>
+        </div>
+    </div>
+</div>
+            </footer>
+
+        </div> <!-- .lv-page -->
+    </div> <!-- .lv-super -->
+
+    <!-- OFF-CANVAS MENU (LEFT) -->
+    <nav id="off-canvas-menu-left" class="hide" aria-hidden="true">
+        <ul>
+    <li class=""><a href="/"><i class="fi-home"></i>&nbsp; Home</a></li>
+    <li class=""><a href="/research/cases/"><i class="fi-magnifying-glass"></i>&nbsp; Research</a>
+        <ul class="no-bullet">
+            <li class="active"><a href="/research/cases/">Basic</a></li>
+            <li><a href="/research/cases/">Cases</a></li>
+            <li><a href="/research/cases/">Legislation / Commentary</a></li>
+            <li><a href="/research/cases/">Journals</a></li>
+            <li><a href="/research/cases/">News</a></li>
+            <li><a href="/research/cases/">Government and Regulatory</a></li>
+        </ul>
+    </li>
+    <!-- <li class=""><a href="/workflow/"><i class="fi-graph-bar"></i>&nbsp; Workflow</a></li> -->
+    <!-- <li class=""><a href="/tools/"><i class="fi-wrench"></i>&nbsp; Tools</a></li> -->
+    <!-- <li class=""><a href="/learning/"><i class="fi-info"></i>&nbsp; Learning</a></li> -->
+    <!-- <li class=""><a href="/alerts/"><i class="fi-alert"></i>&nbsp; Alerts</a></li> -->
+    <!-- <li class=""><a href="/history/"><i class="fi-clock"></i>&nbsp; History</a></li> -->
+</ul>
+    </nav>
+
+    <!-- OFF-CANVAS MENU (RIGHT) -->
+    <nav id="off-canvas-menu-right" class="hide" aria-hidden="true">
+        <ul>
+    <li><a href="#"><img width="30" src="/img/ui/no-face.png" alt="Profile Icon"> Jason Chen<br><small>jason.chen@thomsonreuters.com</small></a></li>
+    <li><a href="#">Contacts</a></li>
+    <li><a href="#">History</a></li>
+    <li><a href="#">Preferences</a></li>
+    <li><a href="#">Client ID</a></li>
+    <li><a href="#">Help</a></li>
+    <li><a href="#">Feedback</a></li>
+</ul>
+    </nav>
+
+    <!-- ***** JAVASCRIPT ***** -->
+
+    <script src="/assets/scripts/optimized.js"></script>
+
+    <script>
+        $(document).foundation();
+
+        $(function() {
+            $("#off-canvas-menu-left").mmenu({
+               "offCanvas": {
+                  "position": "left"
+               }
+            });
+
+            $("#off-canvas-menu-right").mmenu({
+               "offCanvas": {
+                  "position": "right"
+               }
+            });
+         });
+    </script>
+
+    <!-- Google Analytics Here -->
+
+    <!-- No Javascript Warning -->
+    <!-- http://outdatedbrowser.com -->
+    <noscript>
+        <div class="lv-alert lv-unselectable">
+            <p>Your browser has Javascript disabled. Some features may be limited.</p>
+            <span class="close-btn">&times;</span>
+        </div>
+    </noscript>
+
+</body>
+</html>
