@@ -1,71 +1,29 @@
-<section class="mobile-nav show-for-small-only">
-    <a class="left-menu-btn left" href="#off-canvas-menu-left"><span class="hit-area"><i class="fi-list"></i></span></a>
-    <a class="right-menu-btn right" href="#off-canvas-menu-right"><span class="hit-area"><i class="fi-results-demographics"></span></i></a>
-    <span class="logo">
-        <span class="hit-area">
-            <select class="site-switcher">
-                <option value="husker">Checkpoint</option>
-                <option value="starbuck">Westlaw NZ</option>
-                <option value="hotdog">Westlaw USA</option>
-                <option value="apollo">Westlaw CAN</option>
-            </select>
-        </span>
-    </span>
+<section class="text-center large-text-left">
+	<a class="mobile-nav-btn left" href="#off-canvas-menu-left"><i class="fi-list"></i></a>
+	<a class="mobile-nav-btn right hide-for-large-up" href="#off-canvas-menu-right"><i class="fi-results-demographics"></i></a>
+	<ul class="inline-list logo-switcher-wrapper">
+		<li>
+			<a title="Checkpoint®" class="logo show-for-medium-up" href="/">
+				<img src="{{ "/img/content/logo.png" | prepend: site.assets }}" alt="Checkpoint">
+			</a>
+		</li>
+		<li>
+			<div class="country-toggle">
+				<select>
+					<option value="au">Australia</option>
+					<option value="nz">New Zealand</option>
+				</select>
+			</div>
+		</li>
+	</ul>
 </section>
 
-<a class="logo left show-for-medium-up" href="/"><img src="{{ "/img/content/logo.png" | prepend: site.assets }}" alt=""></a>
-
-<div class="profile right text-right show-for-medium-up">
-  <div class="left">
-    <h5>Mitchell Warren</h5>
-    <span>Logout</span>
-  </div>
-  <a class="right profile-pic" href="#" data-options="align:bottom" data-dropdown="hover1">
-    <img width="50" src="{{ "/img/ui/no-face.png" | prepend: site.assets }}" alt="Profile Pic">
-
-    <ul id="hover1" class="f-dropdown text-left" data-dropdown-content>
-      <li><a href="#">Contacts</a></li>
-      <li><a href="#">History</a></li>
-      <li><a href="#">Preferences</a></li>
-      <li><a href="#">Client ID</a></li>
-      <li><a href="#">Help</a></li>
-      <li><a href="#">Feedback</a></li>
-    </ul>
-  </a>
-</div>
-
-
-
-
-<div class="row is-full-width">
-  <div class="columns">
-    <!-- <a href="#"><img src="http://placehold.it/300x100/4768B0/ffffff&text=Westlaw Au" alt=""></a> -->
-    <!-- <select>
-      <option value="husker">Husker</option>
-      <option value="starbuck">Starbuck</option>
-      <option value="hotdog">Hot Dog</option>
-      <option value="apollo">Apollo</option>
-    </select> -->
-  </div>
-</div>
-
-{% comment %}
-<script>
-  window.onload = function() {
-    $('.left-menu-btn').click(function(){
-        $('.lv-page').css(
-        {
-          "position": "absolute",
-          "left": "325px"
-
-        });
-    });
-
-    $('#temp-return').click(function(){
-        // $('.lv-page').animate({left: "0"}, 300, 'linear', function(){});
-        alert('wot');
-    });
-
-  };
-</script>
-{% endcomment %}
+<section class="user-profile right text-right show-for-large-up">
+	<div class="left">
+		<strong class="user-profile-title">Jason Chen</strong>
+		<a class="logout-btn" href="#">LOGOUT</a>
+	</div>
+	<a class="right user-profile-pic" href="#">
+		<img width="40" src="{{ "/img/ui/no-face.png" | prepend: site.assets }}" alt="Profile Pic">
+	</a>
+</section>

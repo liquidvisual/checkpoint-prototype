@@ -6,12 +6,12 @@
 //-----------------------------------------------------------------
 
 $(document).ready(function() {
-    //NProgress.start(); // Start preloader bar
+    NProgress.start(); // Start preloader bar
 });
 
-// window.onload = function(){
-//     //NProgress.done();
-// }
+window.onload = function(){
+    NProgress.done();
+}
 
 //-----------------------------------------------------------------
 // <= IE8 Caution Message

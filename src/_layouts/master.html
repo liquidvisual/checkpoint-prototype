@@ -16,10 +16,10 @@
 
     <!-- build:css /assets/css/optimized.css -->
     <link rel="stylesheet" href="/vendor/animate.css/animate.min.css">
-    <link rel="stylesheet" href="/css/jquery-mmenu-all.css">
     <link rel="stylesheet" href="/css/foundation/foundation.css">
     <link rel="stylesheet" href="/css/foundation-icons.css">
     <link rel="stylesheet" href="/css/liquidvisual/liquidvisual.css">
+    <!-- <link rel="stylesheet" href="/css/fonts.css"> -->
     <link rel="stylesheet" href="/css/main.css">
     <!-- endbuild -->
 
@@ -35,8 +35,8 @@
 
 </head>
 <body>
-    <div class="lv-super">
-        <div class="lv-page">
+    <div class="lv-super developerX">
+        <div class="lv-page {% if page.exclude_menu %} exclude-menu {% endif %} {% if page.url == "/" %} homepage {% endif %}">
 
             <!-- HEADER -->
             <header class="header">
@@ -44,12 +44,27 @@
             </header>
 
             <!-- STAGE -->
-            <section class="stage {% if page.url == "/" %} homepage {% else %} internal {% endif %}">
-                {{ content }}
-            </div> <!-- .stage -->
+            <section class="stage">
+
+                <!-- NAVIGATION -->
+                <nav class="navigation">
+                    {% include navigation.html %}
+                </nav>
+
+                <!-- MAIN -->
+                <main class="main">
+                    {{ content }}
+                </main>
+
+                <!-- SIDEBAR -->
+                <aside class="sidebar">
+                    {% include sidebar.html %}
+                </aside>
+
+            </section>
 
             <!-- FOOTER -->
-            <footer class="footer hide-for-small-only">
+            <footer class="footer">
                 {% include footer.html %}
             </footer>
 
@@ -61,23 +76,16 @@
         {% include navigation_off_canvas.html %}
     </nav>
 
-    <!-- OFF-CANVAS MENU (LEFT) -->
+    <!-- OFF-CANVAS MENU (RIGHT) -->
     <nav id="off-canvas-menu-right" class="hide" aria-hidden="true">
         {% include navigation_off_canvas_right.html %}
     </nav>
 
-    <!--[if lt IE 9]>
-    <div class="lv-alert lv-unselectable">
-        <p>Your browser is out of date. Please <a href="http://outdatedbrowser.com">upgrade</a> to experience more of the web.</p>
-        <span class="close-btn">&times;</span>
-    </div>
-    <![endif]-->
-
     <!-- ***** JAVASCRIPT ***** -->
 
     <!-- build:js /assets/scripts/optimized.js -->
-	<script src="/vendor/jquery/dist/jquery.min.js"></script>
-    <script src="/vendor/foundation/js/foundation.min.js"></script>
+	<script src="/scripts/legacy/jquery-1.11.1.min.js"></script>
+    <script src="/scripts/legacy/foundation.js"></script>
     <script src="/vendor/fastclick/lib/fastclick.js"></script>
     <script src="/vendor/jquery-placeholder/jquery.placeholder.js"></script>
     <script src="/vendor/nprogress/nprogress.js"></script>
@@ -101,26 +109,16 @@
                }
             });
          });
-
-    var sidebar = $(".sidebar");
-    $("#sidebar-collapse-btn").click(function(){
-      if (sidebar.hasClass('is-closed')) {
-        sidebar.removeClass('is-closed').addClass('is-open');
-    } else {
-      sidebar.removeClass('is-open').addClass('is-closed');
-    }
-
-    });
-
     </script>
 
     <!-- Google Analytics Here -->
 
     <!-- No Javascript Warning -->
+    <!-- http://outdatedbrowser.com -->
     <noscript>
         <div class="lv-alert lv-unselectable">
             <p>Your browser has Javascript disabled. Some features may be limited.</p>
-            <span class="close-btn hide">&times;</span>
+            <span class="close-btn">&times;</span>
         </div>
     </noscript>
 

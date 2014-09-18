@@ -1,20 +1,9 @@
 <div class="content-block">
     <div class="content-block-header">
-        <h2>{{ include.header }}</h2>
+        <h3>{{ include.header }}</h3>
         <a title="Minimize" class="minimize-btn" href="#"><span></span></a>
     </div>
     <div class="content-block-inner">
         {{ include.body }}
     </div>
 </div>
-
-{% comment %}
-{% if include.image %}
-   {% capture heading_image %}
-      <img width="540" height="93" src="{{ include.image }}" alt="{{ include.image_desc }}">
-   {% endcapture %}
-   {% include generic/spacer.html %}
-   {% include generic/body.html content=heading_image %}
-
-{% endif %}
-{% endcomment %}

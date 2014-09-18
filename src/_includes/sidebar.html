@@ -1,56 +1,44 @@
 <ul id="fixedScroll" class="tabs text-center" data-tab role="tablist">
-  <li class="tab-title active" role="presentational">
-    <a href="#details" role="tab" tabindex="0" aria-selected="true" controls="panel2-1"><i class="fi-eye"></i> <span class="text">Details</span></a>
-  </li>
-  <li class="tab-title" role="presentational">
-    <a href="#pins" role="tab" tabindex="0" aria-selected="false" controls="panel2-2"><i class="fi-flag"></i> <span class="text">Pins</span></a>
-  </li>
-  <li class="tab-title" role="presentational">
-    <a id="sidebar-collapse-btn" href="#collapse" role="tab" tabindex="0" aria-selected="false" controls="panel2-3"><i class="fi-arrow-right"></i> <span class="text">Collapse</span></a>
-  </li>
+	<li class="tab-title active" role="presentational">
+		<a href="#details" role="tab" tabindex="0" aria-selected="true" controls="panel2-1"><i class="fi-eye"></i> Details</a>
+	</li>
+	<li class="tab-title" role="presentational">
+		<a href="#pins" role="tab" tabindex="0" aria-selected="false" controls="panel2-2"><i class="fi-flag"></i> Links</a>
+	</li>
+	<li class="tab-title" role="presentational">
+		<a href="#collapse" role="tab" tabindex="0" aria-selected="false" controls="panel2-3"><i class="fi-arrow-right"></i> Collapse</a>
+	</li>
 </ul>
-
 <div class="tabs-content">
-  <section role="tabpanel" aria-hidden="false" class="content active" id="details">
-    <h3>Tips for Searching</h3>
-    <p>Weslaw supports the use of a number of different connectors. The most common are <strong>AND</strong> and <strong>OR</strong>. By default if multiple terms are entered without connectors, Westlaw will automatically insert the <strong>'&amp;' (AND)</strong> connector in between each term.</p>
-    <p>Usable connectors, their symbols and examples are available below.</p>
-    <p><a href="#" class="button small radius knockout">See All Connectors</a></p>
-    <hr>
-    <h3>Need Assistance?</h3>
-    <p>Don't hesitate to call our Customer Help Desk on the number below.</p>
-    <p><a href="#" class="button small radius knockout">1800 020 548</a></p>
-  </section>
-  <section role="tabpanel" aria-hidden="true" class="content" id="pins">
-
-    <!-- BLOCK -->
-
-        {% capture body_text %}
-            <ul>
-                <li><a href="#">Contact Details</a></li>
-                <li><a href="#">Account Management Details</a></li>
-                <li><a href="#">Thomson Reuters Website (AU)</a></li>
-                <li><a href="#">Thomson Reuters Website (NZ)</a></li>
-            </ul>
-        {% endcapture %}
-        {% include dash_block.html header="My Pins" body=body_text %}
-
-  </section>
+	<section role="tabpanel" aria-hidden="false" class="content active" id="details">
+		{% if page.sidebar_content %}
+			{{ page.sidebar_content }}
+		{% else %}
+			<h3>Tips for Searching</h3>
+			<p>Checkpoint® supports the use of a number of different types of connectors. The most commonly used connectors are <strong>AND</strong> and <strong>OR</strong>. By default if you enter multiple terms with no connectors, Checkpoint® will automatically insert the '&amp;' <strong>(AND)</strong> connector in between each term.</p>
+			<p>The connectors you can use on Checkpoint®, their symbols and an example are listed below:</p>
+			<p><a href="#" class="button small radius knockout">See All Connectors</a></p>
+			<hr>
+			<h3>Need Assistance?</h3>
+			<p>Don't hesitate to call our Customer Help Desk on the number below.</p>
+			<p><a href="#" class="button small radius knockout">1800 020 548</a></p>
+		{% endif %}
+	</section>
+	<section role="tabpanel" aria-hidden="true" class="content" id="pins">
+		<h2>Second panel content goes here...</h2>
+	</section>
 </div>
-
-
 
 {% comment %}
 <script>
-  window.onload = function() {
-    var $scrollingDiv = $("#fixedScroll");
-
-    $(".content-scroller").scroll(function(){
-      console.log("hey");
-      $scrollingDiv
-        .stop()
-        .animate({"top": ($(this).scrollTop()) + "px"}, "slow" );
-    });
-  };
+window.onload = function() {
+var $scrollingDiv = $("#fixedScroll");
+$(".stage").scroll(function(){
+console.log("hey");
+$scrollingDiv
+.stop()
+.animate({"top": ($(this).scrollTop()) + "px"}, "slow" );
+});
+};
 </script>
 {% endcomment %}

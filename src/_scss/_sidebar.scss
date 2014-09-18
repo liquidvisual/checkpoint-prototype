@@ -1,0 +1,99 @@
+/*
+    SIDEBAR.CSS
+
+    - Last updated: 18.09.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+$sidebar-width: 300px;
+
+//-----------------------------------------------------------------
+// Sidebar
+//-----------------------------------------------------------------
+
+.sidebar {
+	@extend .table-cell;
+	width: $sidebar-width;
+	background: #EDEFEF;
+	box-shadow: inset 2px 0px 5px #DFE1E1;
+	z-index: 10;
+
+	@media (max-width: 1200px) {
+		display: none !important;
+	}
+}
+
+//=========================================
+// Shadow Piece Overlay
+//=========================================
+
+.sidebar:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	box-shadow: inset 2px 0px 5px #DFE1E1;
+	bottom: 0;
+	width: 10px;
+	z-index: 10;
+}
+
+.lt-ie9 .sidebar {
+	border-left: 1px solid #CACDCD;
+}
+
+//=========================================
+// Sidebar Content
+//=========================================
+
+.sidebar p {
+    font-size: 14px;
+}
+
+//=========================================
+// Sidebar Tabs
+//=========================================
+
+.sidebar .tabs {
+	width: 100%;
+	position: relative;
+	z-index: 1;
+	background: #EDEFEF;
+	padding-bottom: 10px;
+
+	i {
+		display: block;
+		font-size: 1.4rem;
+		line-height: 1;
+	}
+
+	li {
+		width: 33.3333333%;
+	}
+
+	li:last-child a {
+		border-right: 0;
+	}
+
+	a {
+		outline: none;
+		padding: 10px 0;
+		border-bottom: 1px solid #CACDCD;
+		border-right: 1px solid #CACDCD;
+	}
+
+	.active a {
+		border-bottom: 0;
+	}
+}
+
+.sidebar .tabs-content {
+	padding: 15px 30px 30px 30px;
+}
+
+//=========================================
+//
+//=========================================

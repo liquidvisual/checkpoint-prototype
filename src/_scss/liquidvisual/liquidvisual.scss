@@ -22,7 +22,6 @@
 //-----------------------------------------------------------------
 
 @import "settings";
-@import "topbar-settings";
 
 //-----------------------------------------------------------------
 // Components
@@ -33,9 +32,8 @@
 @import "../../../vendor/liquidvisual-foundation/scss/liquidvisual/components/helpers";
 @import "../../../vendor/liquidvisual-foundation/scss/liquidvisual/components/hero";
 @import "../../../vendor/liquidvisual-foundation/scss/liquidvisual/components/inline-list";
-// @import "../../../vendor/liquidvisual-foundation/scss/liquidvisual/components/notifications";
+@import "../../../vendor/liquidvisual-foundation/scss/liquidvisual/components/notifications";
 @import "../../../vendor/liquidvisual-foundation/scss/liquidvisual/components/toolbox";
-@import "../../../vendor/liquidvisual-foundation/scss/liquidvisual/topbar/topbar";
 
 //-----------------------------------------------------------------
 // Vendor

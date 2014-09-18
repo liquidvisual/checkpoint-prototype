@@ -140,10 +140,10 @@ $header-font-color: #222;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-$h1-font-size: rem-calc(48); // 44
-$h2-font-size: rem-calc(36); // 37
-$h3-font-size: rem-calc(28); // 27
-$h4-font-size: rem-calc(18); // 23
+$h1-font-size: rem-calc(30); // 44
+$h2-font-size: rem-calc(27); // 37
+$h3-font-size: rem-calc(23); // 27
+$h4-font-size: rem-calc(20); // 23
 $h5-font-size: rem-calc(18); // 18
 $h6-font-size: 1rem;
 
@@ -351,9 +351,9 @@ $crumb-slash: "\203A";
 
 // We use these to build padding for buttons.
 $button-tny: rem-calc(6); //rem-calc(10);
-$button-sml: rem-calc(9);
-$button-med: rem-calc(12); //rem-calc(16);
-// $button-lrg: rem-calc(18);
+$button-sml: rem-calc(8);
+$button-med: rem-calc(10); //rem-calc(16);
+$button-lrg: rem-calc(12);
 
 // We use this to control the display property.
 // $button-display: inline-block;
@@ -365,7 +365,7 @@ $button-med: rem-calc(12); //rem-calc(16);
 // $button-font-color-alt: #333;
 // $button-font-tny: rem-calc(11);
 // $button-font-sml: rem-calc(13);
-$button-font-med: rem-calc(20); //rem-calc(16);
+// $button-font-med: rem-calc(16);
 // $button-font-lrg: rem-calc(20);
 $button-font-weight: 600; //$font-weight-normal;
 // $button-font-align: center;

@@ -1,0 +1,105 @@
+/*
+    NAVIGATION.CSS
+
+    - Last updated: 18.09.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+//-----------------------------------------------------------------
+// Navigation
+//-----------------------------------------------------------------
+
+.navigation {
+	@extend .table-cell;
+	width: $primary-nav-width + $secondary-nav-width;
+
+	@media (max-width: 900px) {
+		display: none !important;
+	}
+}
+
+.nav-table-wrapper {
+	display: table;
+	position: fixed;
+	top: $header-height;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	height: 100%;
+}
+
+//=========================================
+// Primary Nav (Tools Nav)
+//=========================================
+
+.primary-nav {
+	@extend .table-cell;
+	width: $primary-nav-width;
+	background: $dark-grey;
+	height: 100%;
+
+	// display: table-cell;
+	// vertical-align: top;
+	// height: 100%;
+}
+
+.primary-nav a {
+	color: lighten($dark-grey, 60%);
+	display: block;
+	padding: 10px 0;
+	font-size: 11px;
+}
+
+.primary-nav i {
+	font-size: 28px;
+	display: block;
+	line-height: 1;
+}
+
+.primary-nav a:hover {
+	@extend .transition;
+	color: $secondary-color;
+}
+
+.primary-nav .active a {
+	// background: darken($dark-grey, 30%);
+	color: $primary-color;
+}
+
+//=========================================
+// Seconday Nav (Flyout Nav)
+//=========================================
+
+.secondary-nav {
+	background: white;
+	width: $secondary-nav-width;
+	height: 100%;
+	border-right: 1px solid #D4DCE3;
+	overflow: auto;
+	-webkit-overflow-scrolling : touch;
+
+	display: table-cell;
+	vertical-align: top;
+	height: 100%;
+}
+
+.secondary-nav h4 {
+	padding: 15px 15px;
+}
+
+.secondary-nav a {
+	display: block;
+	border-bottom: 1px solid #D4DCE3;
+	color: #676767;
+	padding: 10px 15px;
+	font-size: 0.9rem;
+}
+
+.secondary-nav .active a {
+	background: #5E6E7F;
+	color: white;
+	font-weight: 600;
+}

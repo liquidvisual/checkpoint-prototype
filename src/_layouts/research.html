@@ -1,0 +1,101 @@
+---
+layout: master
+---
+
+<div class="row">
+    <div class="columns">
+        <h3>Cases</h3>
+        <hr>
+    </div>
+</div>
+
+<form novalidate action="/research/results" method="post">
+    <div class="row">
+        <div class="medium-10 columns">
+
+            {% for i in (1..6)  %}
+            <div class="row">
+                <div class="medium-3 columns">
+                    <a class="tooltip-icon right inline" title="Todo: Tooltips" href="#"><i class="fi-info"></i></a>
+                    <label for="" class="text-left medium-text-right">Field Name</label>
+                </div>
+                <div class="medium-9 columns">
+                    <input type="text" id="">
+                </div>
+            </div>
+            {% endfor %}
+
+            <div class="row">
+                <div class="medium-3 columns">
+                    <a class="tooltip-icon right inline" title="Todo: Tooltips" href="#"><i class="fi-info"></i></a>
+                    <label for="" class="text-left medium-text-right">Field Name</label>
+                </div>
+                <div class="medium-9 columns">
+                    <select>
+                        <option value="husker">Husker</option>
+                        <option value="starbuck">Starbuck</option>
+                        <option value="hotdog">Hot Dog</option>
+                        <option value="apollo">Apollo</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Dates -->
+
+            <div class="row">
+                <div class="medium-3 columns">
+                    <a class="tooltip-icon right inline" title="Todo: Tooltips" href="#"><i class="fi-info"></i></a>
+                    <label for="" class="text-left medium-text-right">Judgement Date</label>
+                </div>
+                <div class="medium-9 columns">
+                    <div class="row">
+                        <div class="medium-4 columns">
+                            <input type="text" placeholder="Start Date" id="">
+                        </div>
+                        <div class="medium-4 columns">
+                            <input type="text" placeholder="End Date" id="">
+                        </div>
+                        <div class="medium-4 columns">
+                            <input id="checkbox1" type="checkbox"><label for="checkbox1">Exact Date</label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Advanced and more -->
+
+            <div class="row">
+                <div class="medium-offset-3 medium-9 columns">
+                    <a class="button tiny knockout radius" href="#">Basic Search Options</a>
+                    <a class="button tiny knockout radius" href="#">More Search Options</a>
+                </div>
+            </div>
+
+            <!-- Radio -->
+
+            <div class="row">
+                <div class="medium-3 columns">
+                    <label for="" class="text-left medium-text-right">Preferred results format:</label>
+                </div>
+                <div class="medium-9 columns">
+                    <input type="radio" name="tree" value="tree" id=""><label for="pokemonRed">Tree of Contents</label>
+<input type="radio" name="doc" value="doc" id=""><label for="">Document List</label>
+                </div>
+            </div>
+
+            <!-- Submit -->
+
+            <div class="row">
+                <div class="medium-offset-3 medium-9 columns">
+                    <button value="submit" class="button radius medium">Search</button>
+                </div>
+            </div>
+
+        </div> <!-- .columns -->
+    </div>  <!-- .row -->
+</form>
+
+<hr>
+
+{{ content }}
